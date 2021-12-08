@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Form() {
+export default function Search() {
   return (
     <form className="weather-search" id="weather-search">
       <div className="row">
