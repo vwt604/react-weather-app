@@ -10,7 +10,7 @@ import WeatherForecast from "./WeatherForecast";
 const App = () => (
   <div className="container">
     <div className="weather-app-wrapper">
-      <Weather city="Vancouver" temperature="15" />
+      <Weather city="Lisbon" />
       <WeatherForecast />
       <Footer />
     </div>
