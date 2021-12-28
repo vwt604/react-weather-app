@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import Search from "./Search";
 import WeatherInfo from "./WeatherInfo";
+import Loader from "react-loader-spinner";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
-  let [city, setCity] = useState("Vancouver");
+  let [city, setCity] = useState(props.city);
 
   const handleResponse = (res) => {
     setWeather({
@@ -25,7 +27,6 @@ export default function Weather(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("1.", city);
     search();
     event.target.reset();
   };
@@ -74,6 +75,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="loader">
+        <Loader type="Rings" color="#885df1" height={100} width={100} />
+      </div>
+    );
   }
 }

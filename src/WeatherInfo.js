@@ -1,6 +1,10 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
+import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
+  let temperature = Math.round(props.weather.temperature);
+
   return (
     <div className="weather">
       <div className="row">
@@ -21,7 +25,7 @@ export default function WeatherInfo(props) {
               </span>
             </li>
             <li>
-              Last updated: <span className="time">Friday 15:49</span>
+              Last updated: <FormattedDate date={props.weather.date} />
             </li>
           </ul>
         </div>
@@ -32,10 +36,7 @@ export default function WeatherInfo(props) {
               src={`http://openweathermap.org/img/wn/${props.weather.icon}.png`}
               alt="clear"
             />
-            <span className="temperature">
-              {Math.round(props.weather.temperature)}
-            </span>
-            <span className="unit">°C</span>
+            <Temperature temperature={temperature} />
           </div>
         </div>
       </div>
