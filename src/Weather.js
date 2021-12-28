@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Search from "./Search";
 import WeatherInfo from "./WeatherInfo";
 import Loader from "react-loader-spinner";
-import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
