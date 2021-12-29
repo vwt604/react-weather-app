@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Search from "./Search";
 import WeatherInfo from "./WeatherInfo";
 import Loader from "react-loader-spinner";
 import WeatherForecast from "./WeatherForecast";
