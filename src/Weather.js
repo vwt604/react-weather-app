@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Search from "./Search";
 import WeatherInfo from "./WeatherInfo";
 import Loader from "react-loader-spinner";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
@@ -19,6 +20,7 @@ export default function Weather(props) {
       icon: res.data.weather[0].icon,
       date: res.data.dt,
       feelsLike: res.data.main.feels_like,
+      coordinates: res.data.coord,
     });
     setLoaded(true);
     console.log(res);
@@ -70,6 +72,7 @@ export default function Weather(props) {
           </form>
         </div>
         <WeatherInfo weather={weather} city={city} />
+        <WeatherForecast weather={weather} />
       </div>
     );
   } else {

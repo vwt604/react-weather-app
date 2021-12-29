@@ -18,14 +18,14 @@ export default function Temperature(props) {
   };
   return (
     <div className="temperature-container d-flex justify-content-end">
-      <span className="temperature">{unit}°</span>
+      <span className="temperature">{unit}</span>
       <span className="unit">
         {" "}
         <a href="/" onClick={setCelcius}>
-          C
-        </a>{" "}
+          °C{" "}
+        </a>
         <a href="/" onClick={setFarenheit}>
-          F
+          °F
         </a>
       </span>
     </div>
