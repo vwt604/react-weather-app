@@ -11,6 +11,7 @@ export default function Weather(props) {
 
   const handleResponse = (res) => {
     setWeather({
+      ready: true,
       city: res.data.name,
       temperature: res.data.main.temp,
       description: res.data.weather[0].description,
