@@ -19,10 +19,10 @@ export default function Weather(props) {
       icon: res.data.weather[0].icon,
       date: res.data.dt,
       feelsLike: res.data.main.feels_like,
-      coordinates: res.data.coord,
+      coord: res.data.coord,
     });
     setLoaded(true);
-    console.log(res);
+    console.log("Weather res", res);
   };
 
   const handleSubmit = (event) => {
@@ -71,7 +71,7 @@ export default function Weather(props) {
           </form>
         </div>
         <WeatherInfo weather={weather} city={city} />
-        <WeatherForecast weather={weather} />
+        <WeatherForecast coord={weather.coord} />
       </div>
     );
   } else {
