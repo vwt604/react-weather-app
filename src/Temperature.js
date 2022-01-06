@@ -27,6 +27,7 @@ export default function Temperature(props) {
         <a href="/" onClick={setFarenheit}>
           °F
         </a>
+        {unit}
       </span>
     </div>
   );
