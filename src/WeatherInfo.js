@@ -4,8 +4,6 @@ import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
-  let temperature = Math.round(props.weather.temperature);
-
   return (
     <div className="weather">
       <div className="row">
