@@ -36,7 +36,7 @@ export default function WeatherInfo(props) {
               code={props.weather.icon}
               description={props.weather.description}
             />
-            <Temperature temperature={temperature} />
+            <Temperature temperature={props.weather.temperature} />
           </div>
         </div>
       </div>

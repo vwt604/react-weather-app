@@ -29,7 +29,7 @@ export default function Weather(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     search();
-    event.target.reset();
+    // event.target.reset();
   };
 
   const updateCity = (event) => {
